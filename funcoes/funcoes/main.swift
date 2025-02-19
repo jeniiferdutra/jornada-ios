@@ -22,3 +22,24 @@ func somaDoisValores2(valor1: Int, valor2: Int) {
 }
 
 somaDoisValores2(valor1: 25, valor2: 5) // MARK: VALOR PODE SER ALTERAVEL
+
+
+// MARK: FUNCAO COM RETORNO
+
+func somaValorTotal() -> Int { // retorno de um inteiro
+    return 50 + 50
+}
+
+print(somaValorTotal())
+
+
+// MARK: FUNCAO COM RETORNO E PARAMETRO
+
+func somaValorTotal2(valor1: Int, valor2: Int) -> Int{
+    return valor1 + valor2
+}
+
+print(somaValorTotal2(valor1: 90, valor2: 50))
+
+var valorDaSoma: Int = somaValorTotal2(valor1: 100, valor2: 600)
+print(valorDaSoma)
