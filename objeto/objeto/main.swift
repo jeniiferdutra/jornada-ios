@@ -41,7 +41,27 @@ class Casa {
 
 // Criar objeto
 var minhaCasa: Casa? = Casa() // () -> Instancia, fazer a leitura de toda a classe.
-print(minhaCasa?.quantidadeDePortas ?? "teste")
+print(minhaCasa?.quantidadeDeQuartos ?? "teste")
 
 
+class Pessoa {
+    
+    var nome: String
+    var idade: Int
+    var peso: Double
+    var altura: Double // se colocar ? ele deixa de ser um atributo obrigatorio
+    
+    // Metodo construtor, fazer manipulaçoes atraves dele
+    init(nome: String, idade: Int, peso: Double, altura: Double) {
+        self.nome = nome
+        self.idade = idade
+        self.peso = peso
+        self.altura = altura
+    }
+    
+}
 
+var jenifer: Pessoa = Pessoa(nome: "Jenifer", idade: 25, peso: 58, altura: 160)
+var guilherme: Pessoa = Pessoa(nome: "Guilherme", idade: 31, peso: 80, altura: 173)
+print(jenifer.idade)
+print(guilherme.nome)
