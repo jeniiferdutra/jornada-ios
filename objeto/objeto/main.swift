@@ -50,6 +50,7 @@ class Pessoa {
     var idade: Int
     var peso: Double
     var altura: Double // se colocar ? ele deixa de ser um atributo obrigatorio
+    private var acimaDoPeso: Bool = false // nao tem como acessar por ser privado
     
     // Metodo construtor, fazer manipulaçoes atraves dele
     init(nome: String, idade: Int, peso: Double, altura: Double) {
@@ -59,9 +60,26 @@ class Pessoa {
         self.altura = altura
     }
     
+    public func getAcimaDoPeso() -> Bool { // Acessar o atributo
+        return acimaDoPeso
+    }
+    
+    public func setAcimaDoPeso(value: Bool) { // Alterar o valor do atributo
+        self.acimaDoPeso = value
+    }
+    
 }
 
 var jenifer: Pessoa = Pessoa(nome: "Jenifer", idade: 25, peso: 58, altura: 160)
 var guilherme: Pessoa = Pessoa(nome: "Guilherme", idade: 31, peso: 80, altura: 173)
 print(jenifer.idade)
 print(guilherme.nome)
+
+
+// MARK: ENCAPSULAMENTO
+
+// Somente quem esta dentro da classe consegue acessar os atributos que estao privates, ou seja, nao tem como acessar de maneira externa
+
+jenifer.setAcimaDoPeso(value: true)
+
+print(jenifer.getAcimaDoPeso())
