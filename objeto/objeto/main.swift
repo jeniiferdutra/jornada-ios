@@ -83,3 +83,43 @@ print(guilherme.nome)
 jenifer.setAcimaDoPeso(value: true)
 
 print(jenifer.getAcimaDoPeso())
+
+class Animal {
+    
+    func comer() {
+        print("O animal esta comendo")
+    }
+    
+    func correndo() {
+        print("O animal esta correndo")
+    }
+    
+    func dormindo() {
+        print("O animal esta dormindo")
+    }
+}
+
+
+class Vaca: Animal {
+    
+    var peso: Int = 470
+    var temChifre: Bool = true
+    
+}
+
+class Cavalo: Animal {
+    
+    var peso: Int = 470
+    var raca: String = "Mangalarga"
+    
+    override func correndo() {
+        print("O cavalo Panter está correndo")
+    }
+    
+}
+
+var mimosa: Vaca = Vaca()
+mimosa.comer()
+
+var panter: Cavalo = Cavalo()
+panter.correndo()
