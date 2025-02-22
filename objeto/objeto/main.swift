@@ -123,3 +123,38 @@ mimosa.comer()
 
 var panter: Cavalo = Cavalo()
 panter.correndo()
+
+
+// MARK: CLASSE TRABALHA COM REFERENCIA
+
+class Mac {
+    
+    var modelo: String
+    var ano: Int
+    
+    init(modelo: String, ano: Int) {
+        self.modelo = modelo
+        self.ano = ano
+    }
+    
+}
+print("-----------------")
+
+var meuMac: Mac = Mac(modelo: "Macbook Pro", ano: 2016)
+var sisterMac: Mac = Mac(modelo: "Macbook Air", ano: 2019)
+
+meuMac.ano = 2020
+print(sisterMac.ano)
+print(meuMac.ano)
+
+meuMac = sisterMac
+print("-----------------")
+print(sisterMac.ano)
+print(meuMac.ano)
+
+print("-----------------")
+meuMac.ano = 2022
+print(sisterMac.ano)
+print(meuMac.ano)
+
+// um objeto é referencia pelo outro, deste modo, se eu mudar algum atributo do meu objeto meuMac, automaticamente eu vou alterar em sisterMac
