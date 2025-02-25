@@ -39,6 +39,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="tappedLoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iKL-yo-wVI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -60,6 +63,9 @@
                     </view>
                     <connections>
                         <outlet property="bemVindoLabel" destination="3Bd-nh-hmS" id="Qsr-oo-jQ6"/>
+                        <outlet property="loginButton" destination="RHN-Wd-9Zp" id="cN1-Z7-3o2"/>
+                        <outlet property="nameTextField" destination="qQN-Ks-pJq" id="IFG-5t-3WE"/>
+                        <outlet property="passwordTextField" destination="Atj-LT-W49" id="xh4-2z-eGc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
