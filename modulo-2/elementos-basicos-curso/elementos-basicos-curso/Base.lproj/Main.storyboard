@@ -58,6 +58,9 @@
                             <constraint firstItem="3Bd-nh-hmS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="xvZ-Fo-3pt"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bemVindoLabel" destination="3Bd-nh-hmS" id="Qsr-oo-jQ6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
