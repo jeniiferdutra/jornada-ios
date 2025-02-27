@@ -29,10 +29,21 @@ class ViewController: UIViewController {
         emailTextField.delegate = self
         passwordTextField.delegate = self
         
+        registerButton.isEnabled = false // bloquear a açao do usuario no botao
+        registerButton.setTitleColor(.white.withAlphaComponent(0.4), for: .disabled)
+        
     }
 
     @IBAction func tappedRegisterBuutton(_ sender: UIButton) {
         print("teste")
+    }
+    
+    func validateTextField() {
+        if nameTextField.text != "" && emailTextField.text != "" && passwordTextField.text != "" {
+            registerButton.isEnabled = true
+        } else {
+            registerButton.isEnabled = false
+        }
     }
     
 }
@@ -48,12 +59,14 @@ extension ViewController: UITextFieldDelegate { // extensao da classe
     func textFieldDidEndEditing(_ textField: UITextField) { // teclado desaparece
         print(#function)
         textField.layer.borderWidth = 0
+        validateTextField()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool { // quando clica no return
         print(#function)
         textField.resignFirstResponder() // abaixar o teclado, portanto o metodo textFieldDidEndEditing é disparado
         return true
+        // n colocamos a funcao validateTextField pq ele só sera disparado caso o usuario clique no botao return
     }
     
 }
