@@ -15,10 +15,25 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Axe-Xj-ndG">
+                                <rect key="frame" x="175" y="412" width="42" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="Axe-Xj-ndG" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="HuA-44-fmP"/>
+                            <constraint firstItem="Axe-Xj-ndG" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="TIx-Ma-GJ6"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kB4-xo-cyx"/>
+                    <connections>
+                        <outlet property="nameLabel" destination="Axe-Xj-ndG" id="YDs-9G-KFs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

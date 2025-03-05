@@ -24,15 +24,26 @@
                                     <action selector="tappedGoScreenButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qvN-EY-rca"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite seu nome:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QSp-k7-9kY">
+                                <rect key="frame" x="25" y="153" width="343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="0Tq-02-ezm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9MD-EH-yuU"/>
                             <constraint firstItem="0Tq-02-ezm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="O2g-7q-Wlv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QSp-k7-9kY" secondAttribute="trailing" constant="25" id="gy1-mb-a4R"/>
+                            <constraint firstItem="QSp-k7-9kY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="hfd-9A-xil"/>
+                            <constraint firstItem="QSp-k7-9kY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="hvV-FD-xuO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="OGd-oZ-t0Y"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="QSp-k7-9kY" id="njD-nx-V6S"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
