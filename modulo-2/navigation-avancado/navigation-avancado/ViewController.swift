@@ -12,9 +12,27 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var nameTextField: UITextField!
     
-    override func viewDidLoad() {
+    override func viewDidLoad() { // Disparo unico, primeiro ciclo de vida disparado
         super.viewDidLoad()
+        print(#function)
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) { // Esse metodo vai ser disparado antes da tela estiver pronta. sera usado por ex: atualizar dados antes da tela ser exibida.
+
+        print(#function)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) { // No momento que a esta esta toda visivel para o usuario. ex de uso: geolocalizacao, capturar a sua devida localizaçao
+        print(#function)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) { // Chamado antes da tela desaparecer. ex: Salvar dados ou estado antes de sair
+        print(#function)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) { // Chamado depois que a tela desapareceu. ex: Liberar recursos pesados (ex: parar um vídeo).
+        print(#function)
     }
 
 
