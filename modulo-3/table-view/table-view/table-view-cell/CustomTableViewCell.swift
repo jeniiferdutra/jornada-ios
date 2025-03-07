@@ -25,7 +25,10 @@ class CustomTableViewCell: UITableViewCell {
     
     override func awakeFromNib() { // é a msm coisa do viewDidLoad
         super.awakeFromNib()
-        titleLabel.text = "Jenifer"
+    }
+    
+    func setupCell(title: String) {
+        titleLabel.text = title
     }
 
     
