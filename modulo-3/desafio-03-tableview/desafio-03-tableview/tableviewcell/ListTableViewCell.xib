@@ -16,39 +16,26 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" highlightedImage="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Wug-tx-K0Z">
-                        <rect key="frame" x="16" y="10" width="24" height="24"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="24" id="7Q9-ph-bkE"/>
-                            <constraint firstAttribute="width" constant="24" id="Day-Un-olF"/>
-                        </constraints>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVz-7R-mmk">
-                        <rect key="frame" x="48" y="11.666666666666664" width="256" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJm-RR-lY8">
+                        <rect key="frame" x="12" y="8" width="292" height="28"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="Wug-tx-K0Z" secondAttribute="trailing" constant="280" id="0SW-45-rGU"/>
-                    <constraint firstItem="JVz-7R-mmk" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="9AZ-u1-dOt"/>
-                    <constraint firstItem="Wug-tx-K0Z" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="9Jn-H3-yZ5"/>
-                    <constraint firstItem="Wug-tx-K0Z" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="COn-Fs-1x2"/>
-                    <constraint firstAttribute="trailing" secondItem="Wug-tx-K0Z" secondAttribute="trailing" constant="16" id="I1e-2i-NAN"/>
-                    <constraint firstItem="JVz-7R-mmk" firstAttribute="leading" secondItem="Wug-tx-K0Z" secondAttribute="trailing" constant="8" id="Ndu-fT-cTX"/>
-                    <constraint firstItem="Wug-tx-K0Z" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ezZ-Do-dRv"/>
-                    <constraint firstAttribute="trailing" secondItem="JVz-7R-mmk" secondAttribute="trailing" constant="16" id="pZV-mJ-KNQ"/>
+                    <constraint firstAttribute="bottom" secondItem="CJm-RR-lY8" secondAttribute="bottom" constant="8" id="I5s-Rr-YwL"/>
+                    <constraint firstItem="CJm-RR-lY8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="f8i-QS-7aG"/>
+                    <constraint firstAttribute="trailing" secondItem="CJm-RR-lY8" secondAttribute="trailing" constant="16" id="fSI-yj-xNW"/>
+                    <constraint firstItem="CJm-RR-lY8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="lkU-m0-DgQ"/>
+                    <constraint firstItem="CJm-RR-lY8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="udC-Gr-Qtn"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="labelTableVie" destination="JVz-7R-mmk" id="4Aa-8v-GCq"/>
+                <outlet property="labelTableView" destination="CJm-RR-lY8" id="50Q-Cb-98W"/>
             </connections>
             <point key="canvasLocation" x="131" y="-11"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="checkmark.circle.fill" catalog="system" width="128" height="123"/>
-    </resources>
 </document>

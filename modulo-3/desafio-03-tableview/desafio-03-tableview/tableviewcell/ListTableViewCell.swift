@@ -12,7 +12,6 @@ class ListTableViewCell: UITableViewCell {
     
     @IBOutlet weak var labelTableView: UILabel!
     
-    
     static let identifier: String = "ListTableViewCell"
     
     static func nib() -> UINib {
