@@ -21,12 +21,11 @@ class TableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
     }
 
-    func setupCell(title: String, img: UIImage) {
-        labelTableView.text = title
-        imageTableView.image = img
+    func setupCell(_ data: Car) {
+        labelTableView.text = data.brand
+        imageTableView.image = data.brandImage
     }
     
 }
