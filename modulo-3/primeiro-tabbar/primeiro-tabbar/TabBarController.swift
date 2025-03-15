@@ -11,19 +11,21 @@ class TabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configItems()
+        configTabBar()
+    }
 
-        // Do any additional setup after loading the view.
+    
+    func configItems() {
+        guard let items = tabBar.items else { return }
+        items[0].title = "Test 01"
+        items[0].title = "Test 02"
+        items[0].title = "Test 03"
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func configTabBar() {
+        tabBar.layer.borderWidth = 0.2
+        tabBar.layer.borderColor = UIColor.black.cgColor
+        tabBar.backgroundColor = .white
     }
-    */
-
 }
