@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  Tela02.swift
 //  desafio-tabbar
 //
 //  Created by Jenifer Rocha on 15/03/25.
@@ -7,13 +7,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class Tela02VC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
 
+
+    }
+    
 
 }
-
