@@ -27,15 +27,25 @@ class Tela01VC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var data: [Profile] = []
+    let imagePicker: UIImagePickerController = UIImagePickerController()// Cria uma instância do UIImagePickerController, que permite ao usuário selecionar uma imagem da galeria ou tirar uma foto com a câmera.
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configElements()
         configTableView()
+        configImagePicker()
+    }
+    
+    func configImagePicker() {
+        imagePicker.delegate = self
+        
     }
     
     func configElements() {
+        view.backgroundColor = .lightGray
         nameLabel.text = "Nome:"
+        profileImageView.contentMode = .scaleAspectFill
         profileImageView.image = UIImage(systemName: "person.circle.fill")
         profileImageView.tintColor = .black
         profileImageView.clipsToBounds = true
@@ -54,11 +64,20 @@ class Tela01VC: UIViewController {
     }
 
     @IBAction func tappedEditPictureButton(_ sender: UIButton) {
+        imagePicker.allowsEditing = false // Impede que o usuário edite a imagem antes de selecioná-la
+        if UIImagePickerController.isSourceTypeAvailable(.camera) { // Verifica se o dispositivo possui uma câmera disponível
+            imagePicker.sourceType = .camera // Se a câmera estiver disponível, define a fonte de dados como a câmera
+        } else {    // Caso contrário, usa a galeria de fotos do dispositivo como fonte de dados
+            imagePicker.sourceType = .photoLibrary
+        }
+        // Apresenta o modal para o usuário escolher as imgs da galeria
+        present(imagePicker, animated: true)
     }
     
     @IBAction func tappedAddButton(_ sender: UIButton) {
         data.append(Profile(name: nameTextField.text ?? "", photo: profileImageView.image ?? UIImage()))
         nameTextField.text = "" // Limpa o texto do campo de texto, deixando-o vazio.
+        profileImageView.image = UIImage(systemName: "person.circle.fill") // img voltar ao estado normal
         // Atualiza (recarrega) todos os dados exibidos na tableView.
         // Ele força a tableView a chamar novamente seus métodos de data source, como:
         // - numberOfRowsInSection: para saber quantas células deve mostrar.
@@ -83,4 +102,16 @@ extension Tela01VC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 140
     }
+}
+
+extension Tela01VC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+// Essa função é chamada automaticamente quando o usuário seleciona uma imagem (foto ou da galeria).
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage { // informando que a imagem selecionada é uma uiimage
+            self.profileImageView.image = image
+        }
+        picker.dismiss(animated: true)
+    }
+    
 }
