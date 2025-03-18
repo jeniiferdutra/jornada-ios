@@ -20,10 +20,12 @@ class CustomTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        userImageView.image = UIImage(systemName: "person")
-        nameLabel.text = "Jenifer R"
+        selectionStyle = .none
     }
 
-
+    public func setupCell(profile: Profile) {
+        userImageView.image = profile.photo
+        nameLabel.text = profile.name
+    }
     
 }

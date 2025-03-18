@@ -26,6 +26,8 @@ class Tela01VC: UIViewController {
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
+    var data: [Profile] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configElements()
@@ -55,17 +57,26 @@ class Tela01VC: UIViewController {
     }
     
     @IBAction func tappedAddButton(_ sender: UIButton) {
+        data.append(Profile(name: nameTextField.text ?? "", photo: profileImageView.image ?? UIImage()))
+        nameTextField.text = "" // Limpa o texto do campo de texto, deixando-o vazio.
+        // Atualiza (recarrega) todos os dados exibidos na tableView.
+        // Ele força a tableView a chamar novamente seus métodos de data source, como:
+        // - numberOfRowsInSection: para saber quantas células deve mostrar.
+        // - cellForRowAt: para configurar e exibir cada célula.
+        // Deve ser usado sempre que o conteúdo (dados) da tabela mudar, para que a interface mostre as informações atualizadas.
+        tableView.reloadData()
     }
     
 }
 
 extension Tela01VC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.identifier, for: indexPath) as? CustomTableViewCell
+        cell?.setupCell(profile: data[indexPath.row])
         return cell ?? UITableViewCell()
     }
     
