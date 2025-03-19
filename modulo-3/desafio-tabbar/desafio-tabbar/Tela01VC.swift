@@ -28,10 +28,11 @@ class Tela01VC: UIViewController {
     
     var data: [Profile] = []
     let imagePicker: UIImagePickerController = UIImagePickerController()// Cria uma instância do UIImagePickerController, que permite ao usuário selecionar uma imagem da galeria ou tirar uma foto com a câmera.
-
+    var alert: AlertController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        alert = AlertController(controller: self)
         configElements()
         configTableView()
         configImagePicker()
@@ -39,7 +40,7 @@ class Tela01VC: UIViewController {
     
     func configImagePicker() {
         imagePicker.delegate = self
-        
+        imagePicker.allowsEditing = false // Impede que o usuário edite a imagem antes de selecioná-la
     }
     
     func configElements() {
@@ -64,14 +65,26 @@ class Tela01VC: UIViewController {
     }
 
     @IBAction func tappedEditPictureButton(_ sender: UIButton) {
-        imagePicker.allowsEditing = false // Impede que o usuário edite a imagem antes de selecioná-la
-        if UIImagePickerController.isSourceTypeAvailable(.camera) { // Verifica se o dispositivo possui uma câmera disponível
-            imagePicker.sourceType = .camera // Se a câmera estiver disponível, define a fonte de dados como a câmera
-        } else {    // Caso contrário, usa a galeria de fotos do dispositivo como fonte de dados
-            imagePicker.sourceType = .photoLibrary
-        }
-        // Apresenta o modal para o usuário escolher as imgs da galeria
-        present(imagePicker, animated: true)
+
+        self.alert?.chooseImage(completion: { option in
+            switch option {
+            case .camera:
+                if UIImagePickerController.isSourceTypeAvailable(.camera) { // Verifica se o dispositivo possui uma câmera disponível
+                    self.imagePicker.sourceType = .camera // Se a câmera estiver disponível, define a fonte de dados como a câmera
+                } else {    // Caso contrário, usa a galeria de fotos do dispositivo como fonte de dados
+                    self.imagePicker.sourceType = .photoLibrary
+                }
+                //Apresenta o modal para o usuário escolher as imgs da galeria
+                self.present(self.imagePicker, animated: true)
+            case .library:
+                self.imagePicker.sourceType = .photoLibrary
+                self.present(self.imagePicker, animated: true)
+            case .cancel:
+                break
+            }
+        })
+        
+
     }
     
     @IBAction func tappedAddButton(_ sender: UIButton) {
