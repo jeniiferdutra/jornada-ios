@@ -88,15 +88,19 @@ class Tela01VC: UIViewController {
     }
     
     @IBAction func tappedAddButton(_ sender: UIButton) {
-        data.append(Profile(name: nameTextField.text ?? "", photo: profileImageView.image ?? UIImage()))
-        nameTextField.text = "" // Limpa o texto do campo de texto, deixando-o vazio.
-        profileImageView.image = UIImage(systemName: "person.circle.fill") // img voltar ao estado normal
-        // Atualiza (recarrega) todos os dados exibidos na tableView.
-        // Ele força a tableView a chamar novamente seus métodos de data source, como:
-        // - numberOfRowsInSection: para saber quantas células deve mostrar.
-        // - cellForRowAt: para configurar e exibir cada célula.
-        // Deve ser usado sempre que o conteúdo (dados) da tabela mudar, para que a interface mostre as informações atualizadas.
-        tableView.reloadData()
+        if nameTextField.text == "" {
+            self.alert?.alertInformation(title: "Atençao!", message: "Por favor, informe o nome!")
+        } else {
+            data.append(Profile(name: nameTextField.text ?? "", photo: profileImageView.image ?? UIImage()))
+            nameTextField.text = "" // Limpa o texto do campo de texto, deixando-o vazio.
+            profileImageView.image = UIImage(systemName: "person.circle.fill") // img voltar ao estado normal
+            // Atualiza (recarrega) todos os dados exibidos na tableView.
+            // Ele força a tableView a chamar novamente seus métodos de data source, como:
+            // - numberOfRowsInSection: para saber quantas células deve mostrar.
+            // - cellForRowAt: para configurar e exibir cada célula.
+            // Deve ser usado sempre que o conteúdo (dados) da tabela mudar, para que a interface mostre as informações atualizadas.
+            tableView.reloadData()
+        }
     }
     
 }

@@ -42,4 +42,11 @@ class AlertController: NSObject {
         allertController.addAction(cancel)
         controller.present(allertController, animated: true)
     }
+    
+    func alertInformation(title: String, message: String) {
+        let alertController: UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let ok  = UIAlertAction(title: "Ok", style: .default)
+        alertController.addAction(ok)
+        controller.present(alertController, animated: true)
+    }
 }
