@@ -39,7 +39,18 @@ extension LoginVC: UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        print(#function)
+        let email: String = loginScreen?.emailTextField.text ?? ""
+        let password: String = loginScreen?.passwordTextField.text ?? ""
+        
+        if !email.isEmpty && !password.isEmpty {
+            print("Botao habilitado")
+            loginScreen?.loginButton.isEnabled = true
+            loginScreen?.loginButton.backgroundColor = .darkGray
+        } else {
+            print("Botao desabilitado")
+            loginScreen?.loginButton.isEnabled = false
+            loginScreen?.loginButton.backgroundColor = .darkGray.withAlphaComponent(0.6)
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

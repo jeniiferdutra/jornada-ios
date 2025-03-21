@@ -62,7 +62,8 @@ class LoginScreen: UIView {
         btn.setTitleColor(.white, for: .normal)
         btn.clipsToBounds = true
         btn.layer.cornerRadius = 7.5
-        btn.backgroundColor = .darkGray
+        btn.isEnabled = false
+        btn.backgroundColor = .darkGray.withAlphaComponent(0.6)
         btn.addTarget(self, action: #selector(tappedLoginButton), for: .touchUpInside)
         return btn
     }()
