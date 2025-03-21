@@ -42,6 +42,23 @@ class LoginScreen: UIView {
         password.textColor = .darkGray
         return password
     }()
+    
+    lazy var loginButton: UIButton = {
+        let btn = UIButton()
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.setTitle("Logar", for: .normal)
+        btn.titleLabel?.font = UIFont.systemFont(ofSize: 18)
+        btn.setTitleColor(.white, for: .normal)
+        btn.clipsToBounds = true
+        btn.layer.cornerRadius = 7.5
+        btn.backgroundColor = .darkGray
+        btn.addTarget(self, action: #selector(tappedLoginButton), for: .touchUpInside)
+        return btn
+    }()
+    
+    @objc func tappedLoginButton(_ sender: UIButton) {
+         print("Botao funcionandooo")
+    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -58,6 +75,7 @@ class LoginScreen: UIView {
         addSubview(loginLabel)
         addSubview(emailTextField)
         addSubview(passwordTextField)
+        addSubview(loginButton)
     }
     
     private func configConstraints() {
@@ -68,10 +86,17 @@ class LoginScreen: UIView {
             emailTextField.topAnchor.constraint(equalTo: loginLabel.bottomAnchor, constant: 45),
             emailTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             emailTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            emailTextField.heightAnchor.constraint(equalToConstant: 45),
             
             passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 20),
             passwordTextField.leadingAnchor.constraint(equalTo: emailTextField.leadingAnchor),
             passwordTextField.trailingAnchor.constraint(equalTo: emailTextField.trailingAnchor),
+            passwordTextField.heightAnchor.constraint(equalTo: emailTextField.heightAnchor),
+            
+            loginButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 50),
+            loginButton.leadingAnchor.constraint(equalTo: emailTextField.leadingAnchor),
+            loginButton.trailingAnchor.constraint(equalTo: emailTextField.trailingAnchor),
+            loginButton.heightAnchor.constraint(equalTo: emailTextField.heightAnchor),
         ])
     }
 }
