@@ -7,7 +7,18 @@
 
 import UIKit
 
+protocol LoginScreenProtocol: AnyObject {
+    func tappedLoginButton()
+    
+}
+
 class LoginScreen: UIView {
+    
+    private weak var delegate: LoginScreenProtocol?
+    
+    public func delegate(delegate: LoginScreenProtocol?) {
+        self.delegate = delegate
+    }
     
     lazy var loginLabel: UILabel = {
         let label = UILabel()
@@ -57,7 +68,8 @@ class LoginScreen: UIView {
     }()
     
     @objc func tappedLoginButton(_ sender: UIButton) {
-         print("Botao funcionandooo")
+        print("Botao funcionandooo")
+        delegate?.tappedLoginButton()
     }
 
     override init(frame: CGRect) {

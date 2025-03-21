@@ -18,8 +18,15 @@ class LoginVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        loginScreen?.delegate(delegate: self)
     }
-
 
 }
 
+extension LoginVC: LoginScreenProtocol {
+    func tappedLoginButton() {
+        print("Chegou na VC")
+    }
+    
+    
+}
