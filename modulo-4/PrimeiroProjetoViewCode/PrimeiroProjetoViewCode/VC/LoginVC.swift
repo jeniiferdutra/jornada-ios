@@ -19,14 +19,32 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loginScreen?.delegate(delegate: self)
+        loginScreen?.configTextFieldDelegate(delegate: self)
     }
 
 }
 
-extension LoginVC: LoginScreenProtocol {
+extension LoginVC: LoginScreenProtocol { // tudo relacionado ao protocolo
     func tappedLoginButton() {
         print("Chegou na VC")
     }
     
     
+}
+
+extension LoginVC: UITextFieldDelegate {
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        print(#function)
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        print(#function)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        print(#function)
+        textField.resignFirstResponder() // para o teclado descer 
+        return false
+    }
 }

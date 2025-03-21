@@ -111,4 +111,9 @@ class LoginScreen: UIView {
             loginButton.heightAnchor.constraint(equalTo: emailTextField.heightAnchor),
         ])
     }
+    
+    public func configTextFieldDelegate(delegate: UITextFieldDelegate) {
+        emailTextField.delegate = delegate
+        passwordTextField.delegate = delegate
+    }
 }
