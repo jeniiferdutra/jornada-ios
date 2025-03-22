@@ -27,6 +27,11 @@ class LoginVC: UIViewController {
 extension LoginVC: LoginScreenProtocol { // tudo relacionado ao protocolo
     func tappedLoginButton() {
         print("Chegou na VC")
+        let vc: HomeVC = HomeVC()
+        // caso queira que a VC seja navigationController
+        // let nav = UINavigationController(rootViewController: vc)
+        present(vc, animated: true)
+        //navigationController?.pushViewController(vc, animated: true)
     }
     
     
