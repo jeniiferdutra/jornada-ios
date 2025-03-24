@@ -7,32 +7,32 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		D03061402D8D0EE000BEB7E5 /* PrimeiroProjetoViewCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrimeiroProjetoViewCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0FF8CC82D921E6C00D70E59 /* AppBackFront.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppBackFront.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		D03061522D8D0EE500BEB7E5 /* Exceptions for "PrimeiroProjetoViewCode" folder in "PrimeiroProjetoViewCode" target */ = {
+		D0FF8CDA2D921E7000D70E59 /* Exceptions for "AppBackFront" folder in "AppBackFront" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = D030613F2D8D0EE000BEB7E5 /* PrimeiroProjetoViewCode */;
+			target = D0FF8CC72D921E6C00D70E59 /* AppBackFront */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		D03061422D8D0EE000BEB7E5 /* PrimeiroProjetoViewCode */ = {
+		D0FF8CCA2D921E6C00D70E59 /* AppBackFront */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				D03061522D8D0EE500BEB7E5 /* Exceptions for "PrimeiroProjetoViewCode" folder in "PrimeiroProjetoViewCode" target */,
+				D0FF8CDA2D921E7000D70E59 /* Exceptions for "AppBackFront" folder in "AppBackFront" target */,
 			);
-			path = PrimeiroProjetoViewCode;
+			path = AppBackFront;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D030613D2D8D0EE000BEB7E5 /* Frameworks */ = {
+		D0FF8CC52D921E6C00D70E59 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,18 +42,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D03061372D8D0EE000BEB7E5 = {
+		D0FF8CBF2D921E6C00D70E59 = {
 			isa = PBXGroup;
 			children = (
-				D03061422D8D0EE000BEB7E5 /* PrimeiroProjetoViewCode */,
-				D03061412D8D0EE000BEB7E5 /* Products */,
+				D0FF8CCA2D921E6C00D70E59 /* AppBackFront */,
+				D0FF8CC92D921E6C00D70E59 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		D03061412D8D0EE000BEB7E5 /* Products */ = {
+		D0FF8CC92D921E6C00D70E59 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D03061402D8D0EE000BEB7E5 /* PrimeiroProjetoViewCode.app */,
+				D0FF8CC82D921E6C00D70E59 /* AppBackFront.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,64 +61,64 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D030613F2D8D0EE000BEB7E5 /* PrimeiroProjetoViewCode */ = {
+		D0FF8CC72D921E6C00D70E59 /* AppBackFront */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D03061532D8D0EE500BEB7E5 /* Build configuration list for PBXNativeTarget "PrimeiroProjetoViewCode" */;
+			buildConfigurationList = D0FF8CDB2D921E7000D70E59 /* Build configuration list for PBXNativeTarget "AppBackFront" */;
 			buildPhases = (
-				D030613C2D8D0EE000BEB7E5 /* Sources */,
-				D030613D2D8D0EE000BEB7E5 /* Frameworks */,
-				D030613E2D8D0EE000BEB7E5 /* Resources */,
+				D0FF8CC42D921E6C00D70E59 /* Sources */,
+				D0FF8CC52D921E6C00D70E59 /* Frameworks */,
+				D0FF8CC62D921E6C00D70E59 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				D03061422D8D0EE000BEB7E5 /* PrimeiroProjetoViewCode */,
+				D0FF8CCA2D921E6C00D70E59 /* AppBackFront */,
 			);
-			name = PrimeiroProjetoViewCode;
+			name = AppBackFront;
 			packageProductDependencies = (
 			);
-			productName = PrimeiroProjetoViewCode;
-			productReference = D03061402D8D0EE000BEB7E5 /* PrimeiroProjetoViewCode.app */;
+			productName = AppBackFront;
+			productReference = D0FF8CC82D921E6C00D70E59 /* AppBackFront.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D03061382D8D0EE000BEB7E5 /* Project object */ = {
+		D0FF8CC02D921E6C00D70E59 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
-					D030613F2D8D0EE000BEB7E5 = {
+					D0FF8CC72D921E6C00D70E59 = {
 						CreatedOnToolsVersion = 16.2;
 					};
 				};
 			};
-			buildConfigurationList = D030613B2D8D0EE000BEB7E5 /* Build configuration list for PBXProject "PrimeiroProjetoViewCode" */;
+			buildConfigurationList = D0FF8CC32D921E6C00D70E59 /* Build configuration list for PBXProject "AppBackFront" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = D03061372D8D0EE000BEB7E5;
+			mainGroup = D0FF8CBF2D921E6C00D70E59;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = D03061412D8D0EE000BEB7E5 /* Products */;
+			productRefGroup = D0FF8CC92D921E6C00D70E59 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D030613F2D8D0EE000BEB7E5 /* PrimeiroProjetoViewCode */,
+				D0FF8CC72D921E6C00D70E59 /* AppBackFront */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D030613E2D8D0EE000BEB7E5 /* Resources */ = {
+		D0FF8CC62D921E6C00D70E59 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -128,7 +128,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D030613C2D8D0EE000BEB7E5 /* Sources */ = {
+		D0FF8CC42D921E6C00D70E59 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -138,7 +138,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		D03061542D8D0EE500BEB7E5 /* Debug */ = {
+		D0FF8CDC2D921E7000D70E59 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -146,9 +146,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PrimeiroProjetoViewCode/Info.plist;
+				INFOPLIST_FILE = AppBackFront/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -156,15 +157,19 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = backfront.PrimeiroProjetoViewCode;
+				PRODUCT_BUNDLE_IDENTIFIER = backfront.AppBackFront;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
-		D03061552D8D0EE500BEB7E5 /* Release */ = {
+		D0FF8CDD2D921E7000D70E59 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -172,9 +177,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PrimeiroProjetoViewCode/Info.plist;
+				INFOPLIST_FILE = AppBackFront/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -182,15 +188,19 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = backfront.PrimeiroProjetoViewCode;
+				PRODUCT_BUNDLE_IDENTIFIER = backfront.AppBackFront;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
-		D03061562D8D0EE500BEB7E5 /* Debug */ = {
+		D0FF8CDE2D921E7000D70E59 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -253,7 +263,7 @@
 			};
 			name = Debug;
 		};
-		D03061572D8D0EE500BEB7E5 /* Release */ = {
+		D0FF8CDF2D921E7000D70E59 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -312,25 +322,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D030613B2D8D0EE000BEB7E5 /* Build configuration list for PBXProject "PrimeiroProjetoViewCode" */ = {
+		D0FF8CC32D921E6C00D70E59 /* Build configuration list for PBXProject "AppBackFront" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D03061562D8D0EE500BEB7E5 /* Debug */,
-				D03061572D8D0EE500BEB7E5 /* Release */,
+				D0FF8CDE2D921E7000D70E59 /* Debug */,
+				D0FF8CDF2D921E7000D70E59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D03061532D8D0EE500BEB7E5 /* Build configuration list for PBXNativeTarget "PrimeiroProjetoViewCode" */ = {
+		D0FF8CDB2D921E7000D70E59 /* Build configuration list for PBXNativeTarget "AppBackFront" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D03061542D8D0EE500BEB7E5 /* Debug */,
-				D03061552D8D0EE500BEB7E5 /* Release */,
+				D0FF8CDC2D921E7000D70E59 /* Debug */,
+				D0FF8CDD2D921E7000D70E59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D03061382D8D0EE000BEB7E5 /* Project object */;
+	rootObject = D0FF8CC02D921E6C00D70E59 /* Project object */;
 }
