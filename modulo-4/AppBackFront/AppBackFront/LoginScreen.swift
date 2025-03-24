@@ -15,6 +15,32 @@ class LoginScreen: UIView {
         image.image = UIImage(named: "BGLogin")
         return image
     }()
+    
+    lazy var logoAppImageView: UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.image = UIImage(named: "BFLogin")
+        return image
+    }()
+    
+    lazy var loginLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .white
+        label.font = UIFont.boldSystemFont(ofSize: 40)
+        label.text = "BF NTF"
+        return label
+    }()
+    
+    lazy var descriptionLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .white
+        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.textAlignment = .center
+        label.text = "O marketplace de NFTs da BackFront Academy"
+        return label
+    }()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -28,6 +54,9 @@ class LoginScreen: UIView {
     
     private func addElements() {
         addSubview(subImageView)
+        addSubview(logoAppImageView)
+        addSubview(loginLabel)
+        addSubview(descriptionLabel)
     }
     
     private func configConstraints() {
@@ -36,7 +65,20 @@ class LoginScreen: UIView {
             subImageView.topAnchor.constraint(equalTo: topAnchor),
             subImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
             subImageView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            subImageView.bottomAnchor.constraint(equalTo: bottomAnchor)
+            subImageView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            
+            logoAppImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 55),
+            logoAppImageView.heightAnchor.constraint(equalToConstant: 108),
+            logoAppImageView.widthAnchor.constraint(equalToConstant: 108),
+            logoAppImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            
+            loginLabel.topAnchor.constraint(equalTo: logoAppImageView.bottomAnchor, constant: 16),
+            loginLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            
+            descriptionLabel.topAnchor.constraint(equalTo: loginLabel.bottomAnchor, constant: 4),
+            descriptionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            descriptionLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            
             
         ])
     }
