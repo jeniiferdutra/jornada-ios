@@ -74,6 +74,53 @@ class LoginScreen: UIView {
         login.layer.borderColor = UIColor.white.cgColor
         return login
     }()
+    
+    lazy var recoverPasswordButton: UIButton = {
+        let btn = UIButton(type: .system)
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.setTitle("Recuperar senha", for: .normal)
+        btn.setTitleColor(UIColor(red: 231/255, green: 48/255, blue: 214/255, alpha: 1.0), for: .normal)
+        btn.addTarget(self , action: #selector(tappedRecoverPasswordButton), for: .touchUpInside)
+        return btn
+    }()
+    
+    lazy var subLoginImageView: UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.image = UIImage(named: "gradient")
+        image.clipsToBounds = true
+        image.layer.cornerRadius = 8
+        image.contentMode = .scaleToFill
+        return image
+    }()
+    
+    lazy var loginButton: UIButton = {
+        let btn = UIButton(type: .system)
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.setTitle("Entrar", for: .normal)
+        btn.setTitleColor(.white, for: .normal)
+        btn.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        btn.clipsToBounds = true
+        btn.layer.cornerRadius = 8
+        btn.titleLabel?.textAlignment = .center
+        btn.addTarget(self , action: #selector(tappedLoginButton), for: .touchUpInside)
+        return btn
+    }()
+    
+    lazy var lineView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .white
+        return view
+    }()
+    
+    @objc func tappedLoginButton(_ sender: UIButton) {
+        print(#function)
+    }
+    
+    @objc func tappedRecoverPasswordButton(_ sender: UIButton) {
+        print(#function)
+    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -92,6 +139,10 @@ class LoginScreen: UIView {
         addSubview(descriptionLabel)
         addSubview(loginTextField)
         addSubview(passwordTextField)
+        addSubview(recoverPasswordButton)
+        addSubview(subLoginImageView)
+        addSubview(loginButton)
+        addSubview(lineView)
     }
     
     private func configConstraints() {
@@ -124,6 +175,25 @@ class LoginScreen: UIView {
             passwordTextField.trailingAnchor.constraint(equalTo: loginTextField.trailingAnchor),
             passwordTextField.heightAnchor.constraint(equalTo: loginTextField.heightAnchor),
             
+            recoverPasswordButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 9),
+            recoverPasswordButton.trailingAnchor.constraint(equalTo: loginTextField.trailingAnchor),
+            recoverPasswordButton.heightAnchor.constraint(equalToConstant: 16),
+            
+            subLoginImageView.topAnchor.constraint(equalTo: recoverPasswordButton.bottomAnchor, constant: 36),
+            subLoginImageView.leadingAnchor.constraint(equalTo: loginTextField.leadingAnchor),
+            subLoginImageView.trailingAnchor.constraint(equalTo: loginTextField.trailingAnchor),
+            subLoginImageView.heightAnchor.constraint(equalToConstant: 43),
+            
+            loginButton.topAnchor.constraint(equalTo: subLoginImageView.topAnchor),
+            loginButton.leadingAnchor.constraint(equalTo: subLoginImageView.leadingAnchor),
+            loginButton.trailingAnchor.constraint(equalTo: subLoginImageView.trailingAnchor),
+            loginButton.bottomAnchor.constraint(equalTo: subLoginImageView.bottomAnchor),
+            
+            
+            lineView.topAnchor.constraint(equalTo: subLoginImageView.bottomAnchor, constant: 48),
+            lineView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 64),
+            lineView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -64),
+            lineView.heightAnchor.constraint(equalToConstant: 0.5),
             
             
         ])
