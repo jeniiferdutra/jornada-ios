@@ -26,11 +26,13 @@ class SelectionVC: UIViewController {
 extension SelectionVC: SelectionScreenProtocol {
     func tappedMacbookButton() {
         print(#function)
+        NotificationCenter.default.post(name: Notification.Name("macbook"), object: nil)
         dismiss(animated: true)
     }
     
     func tappedImacButton() {
         print(#function)
+        NotificationCenter.default.post(name: Notification.Name("imac"), object: nil)
         dismiss(animated: true)
     }
     
