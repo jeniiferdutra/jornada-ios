@@ -18,8 +18,16 @@ class HomeVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        homeScreen?.delegate(delegate: self)
     }
-
-
 }
 
+extension HomeVC: HomeScreenProtocol {
+    func tappedChooseButton() {
+        let vc = SelectionVC()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
+    }
+    
+    
+}

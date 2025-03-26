@@ -7,7 +7,17 @@
 
 import UIKit
 
+protocol HomeScreenProtocol: AnyObject {
+    func tappedChooseButton()
+}
+
 class HomeScreen: UIView {
+    
+    private weak var delegate: HomeScreenProtocol?
+    
+    public func delegate(delegate: HomeScreenProtocol?) {
+        self.delegate = delegate
+    }
     
     lazy var logoImageView: UIImageView = {
         let img = UIImageView()
@@ -21,13 +31,29 @@ class HomeScreen: UIView {
     lazy var descriptionLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .white
+        label.textColor = .black
         label.textAlignment = .center
-        label.text = "Teste Label"
         label.font = UIFont.systemFont(ofSize: 25)
-        
         return label
     }()
+    
+    lazy var chooseButton: UIButton = {
+        let btn = UIButton(type: .system)
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.setTitle("Clique aqui", for: .normal)
+        btn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        btn.setTitleColor(.black, for: .normal)
+        btn.backgroundColor = .white
+        btn.clipsToBounds = true
+        btn.layer.cornerRadius = 8
+        btn.titleLabel?.textAlignment = .center
+        btn.addTarget(self, action: #selector(tappedChooseButton), for: .touchUpInside)
+        return btn
+    }()
+    
+    @objc func tappedChooseButton(_ sender: UIButton) {
+        delegate?.tappedChooseButton()
+    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -42,6 +68,7 @@ class HomeScreen: UIView {
     private func addElements() {
         addSubview(logoImageView)
         addSubview(descriptionLabel)
+        addSubview(chooseButton)
     }
     
     private func configConstraints() {
@@ -57,7 +84,10 @@ class HomeScreen: UIView {
             descriptionLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             descriptionLabel.heightAnchor.constraint(equalToConstant: 60),
             
-            
+            chooseButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -60),
+            chooseButton.leadingAnchor.constraint(equalTo: descriptionLabel.leadingAnchor),
+            chooseButton.trailingAnchor.constraint(equalTo: descriptionLabel.trailingAnchor),
+            chooseButton.heightAnchor.constraint(equalToConstant: 50)
             
         ])
     }
