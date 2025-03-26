@@ -43,7 +43,23 @@ extension HomeVC: HomeScreenProtocol {
     func tappedChooseButton() {
         let vc = SelectionVC()
         vc.modalPresentationStyle = .fullScreen
+        vc.delegate(delegate: self)
         present(vc, animated: true)
+    }
+}
+
+extension HomeVC: SelectionVCProtocol {
+    func updateImac() {
+        homeScreen?.logoImageView.image = UIImage(named: "imac_pro")
+        homeScreen?.descriptionLabel.text = "Imac das galáxias"
+        view.backgroundColor = .cyan
+    }
+    
+    func updateMacbook() {
+        
+        homeScreen?.logoImageView.image = UIImage(named: "macbook_pro")
+        homeScreen?.descriptionLabel.text = "Macbook Pro"
+        view.backgroundColor = .red
     }
     
     
