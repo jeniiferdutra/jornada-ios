@@ -18,8 +18,21 @@ class SelectionVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        selectionScreen?.delegate(delegate: self)
+    }
 
+}
+
+extension SelectionVC: SelectionScreenProtocol {
+    func tappedMacbookButton() {
+        print(#function)
+        dismiss(animated: true)
     }
     
-
+    func tappedImacButton() {
+        print(#function)
+        dismiss(animated: true)
+    }
+    
+    
 }
