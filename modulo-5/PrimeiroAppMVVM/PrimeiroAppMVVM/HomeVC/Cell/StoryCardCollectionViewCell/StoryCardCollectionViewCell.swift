@@ -16,6 +16,7 @@ class StoryCardCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configScreen()
+        screen.configProtocolsCollectionView(delegate: self, dataSource: self)
     }
     
     required init?(coder: NSCoder) {
@@ -23,9 +24,22 @@ class StoryCardCollectionViewCell: UICollectionViewCell {
     }
     
     private func configScreen() {
-        screen.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(screen)
-        screen.pin(to: contentView)
+        screen.pin(to: contentView) // método de extensão que aplica constraints para que screen ocupe toda a contentView
     }
     
+}
+
+extension StoryCardCollectionViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        return UICollectionViewCell()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        <#code#>
+    }
 }
