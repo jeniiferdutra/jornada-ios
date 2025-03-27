@@ -16,6 +16,7 @@ class HomeScreen: UIView {
         cv.translatesAutoresizingMaskIntoConstraints = false
         cv.showsHorizontalScrollIndicator = false // barra do scroll
         // TO DO: REGISTER
+        cv.register(StoryCardCollectionViewCell.self, forCellWithReuseIdentifier: StoryCardCollectionViewCell.identifier)
         cv.backgroundColor = .clear
         return cv
     }()

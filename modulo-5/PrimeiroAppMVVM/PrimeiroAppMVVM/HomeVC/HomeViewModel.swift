@@ -10,7 +10,7 @@ import UIKit
 class HomeViewModel {
 
     public var numberOfItems: Int {
-        2
+        1
     }
     
     public func sizeForItemAt(indexPath: IndexPath, frame: CGRect) -> CGSize {
