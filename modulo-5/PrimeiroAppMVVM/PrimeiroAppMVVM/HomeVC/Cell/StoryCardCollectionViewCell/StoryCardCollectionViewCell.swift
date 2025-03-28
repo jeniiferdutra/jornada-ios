@@ -13,6 +13,8 @@ class StoryCardCollectionViewCell: UICollectionViewCell {
     
     private var screen: StoryCardCollectionViewCellScreen = StoryCardCollectionViewCellScreen()
     
+    private var viewModel: StoryCardViewModel?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configScreen()
@@ -28,11 +30,15 @@ class StoryCardCollectionViewCell: UICollectionViewCell {
         screen.pin(to: contentView) // método de extensão que aplica constraints para que screen ocupe toda a contentView
     }
     
+    public func setupCell(listStory: [Stories]) {
+        viewModel = StoryCardViewModel(listStory: listStory)
+    }
+    
 }
 
 extension StoryCardCollectionViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
+        viewModel?.numberOfItems ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -40,6 +46,6 @@ extension StoryCardCollectionViewCell: UICollectionViewDelegate, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        <#code#>
+        return CGSize(width: collectionView.frame.width, height: 120)
     }
 }
