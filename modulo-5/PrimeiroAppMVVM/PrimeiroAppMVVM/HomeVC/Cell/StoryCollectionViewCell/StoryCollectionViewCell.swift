@@ -30,6 +30,6 @@ class StoryCollectionViewCell: UICollectionViewCell {
     public func setupCell(data: Stories, indexPath: IndexPath) {
         screen.profileImageView.image = UIImage(named: data.image)
         screen.userNameLabel.text = data.userName
-        screen.addBtn.isHidden = indexPath.row == 0 ? false : true // se for igual a 0 quero q retorne um false para q ele n oculta, caso contrario oculta (primeiro item deixar amostra o botao, os demais quero ocultar)
+        screen.addBtn.isHidden = indexPath.row == 0 ? false : true // MARK: Se for igual a 0 quero q retorne um false para q ele n oculta, caso contrario oculta (primeiro item deixar amostra o botao, os demais quero ocultar)
     }
 }

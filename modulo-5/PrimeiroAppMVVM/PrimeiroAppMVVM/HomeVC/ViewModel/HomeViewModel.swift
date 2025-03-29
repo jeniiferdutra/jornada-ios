@@ -9,6 +9,8 @@ import UIKit
 
 class HomeViewModel {
     
+    // MARK: Objeto que sempre deixaremos private para que a camada de View nao faça manipulaçoes com o respectivo objeto
+    
     private var story = [Stories(image: "img1", userName: "Add Story"),
                          Stories(image: "img2", userName: "jack"),
                          Stories(image: "img3", userName: "carolina"),
@@ -18,13 +20,19 @@ class HomeViewModel {
                          Stories(image: "img7", userName: "dheeraj_ks")
     ]
     
+    // MARK: Acessar o objeto criando uma variavel computada do tipo get
+    
     public var getListStory: [Stories] {
         story
     }
+    
+    // MARK: Criar de maneira pública o numberOfItems que usamos na propria Collection
 
     public var numberOfItems: Int {
         1
     }
+    
+    // MARK: Verificaçao se caso for a primeira célula tenha o padrao do tamanho do layout, caso contrário faça a prox linha
     
     public func sizeForItemAt(indexPath: IndexPath, frame: CGRect) -> CGSize {
         if indexPath.row == 0 { // se for a primeira célula

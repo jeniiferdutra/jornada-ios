@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 
+// MARK: Responsavel por conter todos os dados da aplicaçao 
+
 struct Stories {
     let image: String
     let userName: String

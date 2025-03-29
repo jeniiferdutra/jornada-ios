@@ -9,6 +9,8 @@ import UIKit
 
 class StoryCardViewModel {
     
+    // MARK: Variavel de lista
+    
     private var listStory: [Stories]
     
     init(listStory: [Stories]) {
@@ -18,6 +20,8 @@ class StoryCardViewModel {
     public var numberOfItems: Int {
         listStory.count
     }
+    
+    //MARK: listStory é uma lista e abaixo esta retornando um único story 
     
     func loadCurrentStory(indexPath: IndexPath) -> Stories {
         listStory[indexPath.row]
