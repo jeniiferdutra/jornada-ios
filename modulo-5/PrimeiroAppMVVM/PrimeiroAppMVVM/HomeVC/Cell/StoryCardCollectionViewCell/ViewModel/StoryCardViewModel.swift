@@ -22,5 +22,7 @@ class StoryCardViewModel {
     func loadCurrentStory(indexPath: IndexPath) -> Stories {
         listStory[indexPath.row]
     }
+    
+    
 
 }

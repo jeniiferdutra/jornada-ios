@@ -10,5 +10,5 @@ import UIKit
 
 struct Stories {
     let image: String
-    let userNmae: String
+    let userName: String
 }

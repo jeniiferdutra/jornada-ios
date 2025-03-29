@@ -25,8 +25,9 @@ class StoryCardCollectionViewCellScreen: UIView {
         cv.translatesAutoresizingMaskIntoConstraints = false
         cv.showsVerticalScrollIndicator = false // barra do scroll
         // TO DO: REGISTER
+        cv.register(StoryCollectionViewCell.self, forCellWithReuseIdentifier: StoryCollectionViewCell.identifier)
         cv.contentInset = UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 0)
-        cv.backgroundColor = .red
+        cv.backgroundColor = .clear
         return cv
     }()
     

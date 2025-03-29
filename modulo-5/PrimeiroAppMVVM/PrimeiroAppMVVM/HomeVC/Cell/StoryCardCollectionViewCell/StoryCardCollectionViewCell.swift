@@ -42,7 +42,13 @@ extension StoryCardCollectionViewCell: UICollectionViewDelegate, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell() // prox passo é criar a célula
+        
+        guard let viewModel = viewModel else { return UICollectionViewCell() }
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StoryCollectionViewCell.identifier, for: indexPath) as? StoryCollectionViewCell // sempre informar que é StoryCardCollectionViewCell para acessar a setupCell
+        cell?.setupCell(data: viewModel.loadCurrentStory(indexPath: indexPath), indexPath: indexPath)
+        
+        return cell ?? UICollectionViewCell() // prox passo é criar a célula
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

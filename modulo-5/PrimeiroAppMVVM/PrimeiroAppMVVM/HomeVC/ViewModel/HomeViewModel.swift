@@ -9,13 +9,13 @@ import UIKit
 
 class HomeViewModel {
     
-    private var story = [Stories(image: "img1", userNmae: "Add Story"),
-                         Stories(image: "img2", userNmae: "jack"),
-                         Stories(image: "img3", userNmae: "carolina"),
-                         Stories(image: "img4", userNmae: "gabriel"),
-                         Stories(image: "img5", userNmae: "ariana josep"),
-                         Stories(image: "img6", userNmae: "puggy_101"),
-                         Stories(image: "img7", userNmae: "dheeraj_ks")
+    private var story = [Stories(image: "img1", userName: "Add Story"),
+                         Stories(image: "img2", userName: "jack"),
+                         Stories(image: "img3", userName: "carolina"),
+                         Stories(image: "img4", userName: "gabriel"),
+                         Stories(image: "img5", userName: "ariana josep"),
+                         Stories(image: "img6", userName: "puggy_101"),
+                         Stories(image: "img7", userName: "dheeraj_ks")
     ]
     
     public var getListStory: [Stories] {
