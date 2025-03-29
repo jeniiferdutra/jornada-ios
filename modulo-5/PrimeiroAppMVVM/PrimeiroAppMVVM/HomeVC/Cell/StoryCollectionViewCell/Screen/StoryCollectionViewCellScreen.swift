@@ -56,8 +56,8 @@ class StoryCollectionViewCellScreen: UIView { // Criar os elementos dos stories 
             profileImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
             profileImageView.topAnchor.constraint(equalTo: topAnchor, constant: 15),
             
-            addBtn.widthAnchor.constraint(equalToConstant: 70),
-            addBtn.heightAnchor.constraint(equalToConstant: 70),
+            addBtn.widthAnchor.constraint(equalToConstant: 25),
+            addBtn.heightAnchor.constraint(equalToConstant: 25),
             addBtn.bottomAnchor.constraint(equalTo: profileImageView.bottomAnchor),
             addBtn.trailingAnchor.constraint(equalTo: profileImageView.trailingAnchor),
             
