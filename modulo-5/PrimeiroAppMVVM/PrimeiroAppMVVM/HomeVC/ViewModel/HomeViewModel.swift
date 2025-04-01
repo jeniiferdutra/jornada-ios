@@ -11,6 +11,17 @@ class HomeViewModel {
     
     // MARK: Objeto que sempre deixaremos private para que a camada de View nao faça manipulaçoes com o respectivo objeto
     
+    private var posts = [
+        Posts(profileImage: "img2", userName: "jack", postImage: "post1"),
+        Posts(profileImage: "img4", userName: "gabriel", postImage: "post2"),
+        Posts(profileImage: "img3", userName: "carolina", postImage: "post3"),
+        Posts(profileImage: "img6", userName: "puggy_101", postImage: "post4")
+    ]
+    
+    public var getListPosts: [Posts] {
+        posts
+    }
+    
     private var story = [Stories(image: "img1", userName: "Add Story"),
                          Stories(image: "img2", userName: "jack"),
                          Stories(image: "img3", userName: "carolina"),

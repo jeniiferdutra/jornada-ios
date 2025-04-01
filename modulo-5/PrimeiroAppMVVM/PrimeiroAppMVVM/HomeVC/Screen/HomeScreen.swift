@@ -17,6 +17,7 @@ class HomeScreen: UIView {
         cv.showsHorizontalScrollIndicator = false // barra do scroll
         // TO DO: REGISTER
         cv.register(StoryCardCollectionViewCell.self, forCellWithReuseIdentifier: StoryCardCollectionViewCell.identifier)
+        cv.register(PostCardCollectionViewCell.self, forCellWithReuseIdentifier: PostCardCollectionViewCell.identifier)
         cv.backgroundColor = .clear
         return cv
     }()

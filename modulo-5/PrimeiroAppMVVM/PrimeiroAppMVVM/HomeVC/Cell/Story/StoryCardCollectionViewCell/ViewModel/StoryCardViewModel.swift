@@ -23,10 +23,7 @@ class StoryCardViewModel {
     
     //MARK: listStory é uma lista e abaixo esta retornando um único story 
     
-    func loadCurrentStory(indexPath: IndexPath) -> Stories {
+    public func loadCurrentStory(indexPath: IndexPath) -> Stories {
         listStory[indexPath.row]
     }
-    
-    
-
 }

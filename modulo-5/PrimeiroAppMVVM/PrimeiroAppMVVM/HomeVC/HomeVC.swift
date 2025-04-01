@@ -36,14 +36,21 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     //MARK: De acordo com a célula que temos, vai montar a nossa Collection
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        // MARK: Criando a célula que é todo o card (StoryCardCollectionViewCell)
-        
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StoryCardCollectionViewCell.identifier, for: indexPath) as? StoryCardCollectionViewCell
-        
-        // MARK: Setup que passa a lista de Stories que esta na ViewModel
-        
-        cell?.setupCell(listStory: viewModel.getListStory)
-        return cell ?? UICollectionViewCell()
+        if indexPath.row == 0 {
+            
+            // MARK: Criando a célula que é todo o card (StoryCardCollectionViewCell)
+            
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StoryCardCollectionViewCell.identifier, for: indexPath) as? StoryCardCollectionViewCell
+            
+            // MARK: Setup que passa a lista de Stories que esta na ViewModel
+            
+            cell?.setupCell(listStory: viewModel.getListStory)
+            return cell ?? UICollectionViewCell()
+        } else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PostCardCollectionViewCell.identifier, for: indexPath) as? PostCardCollectionViewCell
+            cell?.setupCell(listPosts: viewModel.getListPosts)
+            return cell ?? UICollectionViewCell()
+        }
     }
     
     // MARK: Dimensao que passamos para cada tela
