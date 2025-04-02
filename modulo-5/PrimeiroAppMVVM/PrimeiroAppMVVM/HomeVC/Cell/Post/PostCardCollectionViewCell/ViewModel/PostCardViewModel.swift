@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PostCardViewModel: NSObject {
+class PostCardViewModel {
 
     private var listPosts: [Posts]
     

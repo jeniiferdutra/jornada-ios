@@ -40,7 +40,7 @@ class HomeViewModel {
     // MARK: Criar de maneira pública o numberOfItems que usamos na propria Collection
 
     public var numberOfItems: Int {
-        1
+        2
     }
     
     // MARK: Verificaçao se caso for a primeira célula tenha o padrao do tamanho do layout, caso contrário faça a prox linha
