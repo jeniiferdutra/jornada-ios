@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 protocol LoginScreenProtocol: AnyObject {
     func tappedLoginButton()
@@ -75,6 +76,7 @@ class LoginScreen: UIView {
         super.init(frame: frame)
         backgroundColor = .systemBlue
         addElements()
+        configEmailTextFieldConstraints()
         configConstraints()
     }
     
@@ -92,8 +94,8 @@ class LoginScreen: UIView {
     private func configConstraints() {
         NSLayoutConstraint.activate([
             
-            loginLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 15),
-            loginLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+//            loginLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
+//            loginLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             
             emailTextField.topAnchor.constraint(equalTo: loginLabel.bottomAnchor, constant: 45),
             emailTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
@@ -111,6 +113,17 @@ class LoginScreen: UIView {
             loginButton.heightAnchor.constraint(equalTo: emailTextField.heightAnchor)
         ])
     }
+    
+    // offset = valor positivo
+    // inset = valor negativo
+    
+    private func configEmailTextFieldConstraints() {
+        emailTextField.snp.makeConstraints { make in
+            make.top.equalTo(safeAreaLayoutGuide.snp.top).offset(20)
+            make.centerX.equalToSuperview()
+        }
+    }
+    
     
     public func configTextFieldsDelegate(delegate: UITextFieldDelegate) {
         emailTextField.delegate = delegate

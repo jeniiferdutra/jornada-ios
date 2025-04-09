@@ -7,6 +7,6 @@ target 'PrimeiroProjetoViewCode' do
 
   # Pods for PrimeiroProjetoViewCode
 
-pod 'SnapKit', '~> 5.0.0'
+pod 'SnapKit', '~> 5.7.0'
 
 end

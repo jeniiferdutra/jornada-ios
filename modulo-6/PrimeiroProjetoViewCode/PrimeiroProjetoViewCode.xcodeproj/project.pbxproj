@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FEE6F761CCB66E46BB5EBDB7 /* Pods_PrimeiroProjetoViewCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCAFD10D2DCE35A22B9B2D09 /* Pods_PrimeiroProjetoViewCode.framework */; };
+		C0DE8635B6597219D3DD2DC8 /* Pods_PrimeiroProjetoViewCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06073C2F411ACF4980260DE8 /* Pods_PrimeiroProjetoViewCode.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		010CA8ADF8E75B8187645F67 /* Pods-PrimeiroProjetoViewCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrimeiroProjetoViewCode.debug.xcconfig"; path = "Target Support Files/Pods-PrimeiroProjetoViewCode/Pods-PrimeiroProjetoViewCode.debug.xcconfig"; sourceTree = "<group>"; };
-		BCAFD10D2DCE35A22B9B2D09 /* Pods_PrimeiroProjetoViewCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrimeiroProjetoViewCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		06073C2F411ACF4980260DE8 /* Pods_PrimeiroProjetoViewCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrimeiroProjetoViewCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6705DD3F6FF5F2783DE9E3E8 /* Pods-PrimeiroProjetoViewCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrimeiroProjetoViewCode.debug.xcconfig"; path = "Target Support Files/Pods-PrimeiroProjetoViewCode/Pods-PrimeiroProjetoViewCode.debug.xcconfig"; sourceTree = "<group>"; };
 		D00D8E6B2DA5DF1100A46D86 /* PrimeiroProjetoViewCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrimeiroProjetoViewCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EE435B7E105E76F75DA1CF8B /* Pods-PrimeiroProjetoViewCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrimeiroProjetoViewCode.release.xcconfig"; path = "Target Support Files/Pods-PrimeiroProjetoViewCode/Pods-PrimeiroProjetoViewCode.release.xcconfig"; sourceTree = "<group>"; };
+		D2EDEA68A1E7B82E82055A0B /* Pods-PrimeiroProjetoViewCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrimeiroProjetoViewCode.release.xcconfig"; path = "Target Support Files/Pods-PrimeiroProjetoViewCode/Pods-PrimeiroProjetoViewCode.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -43,29 +43,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FEE6F761CCB66E46BB5EBDB7 /* Pods_PrimeiroProjetoViewCode.framework in Frameworks */,
+				C0DE8635B6597219D3DD2DC8 /* Pods_PrimeiroProjetoViewCode.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04E68E59C8E7C84208B0B8FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06073C2F411ACF4980260DE8 /* Pods_PrimeiroProjetoViewCode.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		527208C7A64DC3F6EA019E37 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				010CA8ADF8E75B8187645F67 /* Pods-PrimeiroProjetoViewCode.debug.xcconfig */,
-				EE435B7E105E76F75DA1CF8B /* Pods-PrimeiroProjetoViewCode.release.xcconfig */,
+				6705DD3F6FF5F2783DE9E3E8 /* Pods-PrimeiroProjetoViewCode.debug.xcconfig */,
+				D2EDEA68A1E7B82E82055A0B /* Pods-PrimeiroProjetoViewCode.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		895ED6AD6652CE6E69BD1562 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				BCAFD10D2DCE35A22B9B2D09 /* Pods_PrimeiroProjetoViewCode.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		D00D8E622DA5DF1100A46D86 = {
@@ -74,7 +73,7 @@
 				D00D8E6D2DA5DF1100A46D86 /* PrimeiroProjetoViewCode */,
 				D00D8E6C2DA5DF1100A46D86 /* Products */,
 				527208C7A64DC3F6EA019E37 /* Pods */,
-				895ED6AD6652CE6E69BD1562 /* Frameworks */,
+				04E68E59C8E7C84208B0B8FE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,10 +92,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D00D8E7E2DA5DF1500A46D86 /* Build configuration list for PBXNativeTarget "PrimeiroProjetoViewCode" */;
 			buildPhases = (
-				FFCC1B8C953BFF6DF0E60421 /* [CP] Check Pods Manifest.lock */,
+				B9DF18F1D83467701E87307D /* [CP] Check Pods Manifest.lock */,
 				D00D8E672DA5DF1100A46D86 /* Sources */,
 				D00D8E682DA5DF1100A46D86 /* Frameworks */,
 				D00D8E692DA5DF1100A46D86 /* Resources */,
+				302CC42F2B9798BAF328E102 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,7 +155,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		FFCC1B8C953BFF6DF0E60421 /* [CP] Check Pods Manifest.lock */ = {
+		302CC42F2B9798BAF328E102 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PrimeiroProjetoViewCode/Pods-PrimeiroProjetoViewCode-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PrimeiroProjetoViewCode/Pods-PrimeiroProjetoViewCode-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PrimeiroProjetoViewCode/Pods-PrimeiroProjetoViewCode-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9DF18F1D83467701E87307D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -192,12 +209,13 @@
 /* Begin XCBuildConfiguration section */
 		D00D8E7F2DA5DF1500A46D86 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 010CA8ADF8E75B8187645F67 /* Pods-PrimeiroProjetoViewCode.debug.xcconfig */;
+			baseConfigurationReference = 6705DD3F6FF5F2783DE9E3E8 /* Pods-PrimeiroProjetoViewCode.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 273F76QQVA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PrimeiroProjetoViewCode/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -220,12 +238,13 @@
 		};
 		D00D8E802DA5DF1500A46D86 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE435B7E105E76F75DA1CF8B /* Pods-PrimeiroProjetoViewCode.release.xcconfig */;
+			baseConfigurationReference = D2EDEA68A1E7B82E82055A0B /* Pods-PrimeiroProjetoViewCode.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 273F76QQVA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PrimeiroProjetoViewCode/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
