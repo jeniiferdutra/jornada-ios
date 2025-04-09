@@ -21,24 +21,35 @@ class LoginVC: UIViewController {
         super.viewDidLoad()
         screen?.delegate(delegate: self)
         screen?.configTextFieldsDelegate(delegate: self)
+        viewModel.delegate(delegate: self)
     }
+    
 }
 
 extension LoginVC: LoginScreenProtocol {
     func tappedLoginButton() {
-//        let vc: HomeVC = HomeVC()
-//        vc.modalPresentationStyle = .fullScreen
-//        present(vc, animated: true) // Modal
-//        navigationController?.pushViewController(vc, animated: true) // caso a vc seja uma navigationController
-        
         viewModel.login(email: screen?.emailTextField.text ?? "", password: screen?.passwordTextField.text ?? "")
-        
-        
+    }
+    
+}
+
+extension LoginVC: LoginViewModelProtocol {
+    
+    func sucessLogin() {
+        let vc: HomeVC = HomeVC()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true) // Modal
+    }
+    
+    func errorLogin(errorMessage: String) {
+        print(#function)
+        Alert(controller: self).showAlertInformation(title: "Ops! error Login!", message: errorMessage )
     }
     
 }
 
 extension LoginVC: UITextFieldDelegate {
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
         print(#function)
     }
@@ -58,6 +69,7 @@ extension LoginVC: UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
         print(#function)
         textField.resignFirstResponder()
         return false

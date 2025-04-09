@@ -8,9 +8,19 @@
 import UIKit
 import FirebaseAuth
 
-class LoginViewModel {
+protocol LoginViewModelProtocol: AnyObject {
+    func sucessLogin()
+    func errorLogin(errorMessage: String)
+}
 
+class LoginViewModel {
+    
+    private weak var delegate: LoginViewModelProtocol?
     private var auth = Auth.auth() // parte de autenticaçao do firebase
+    
+    public func delegate(delegate: LoginViewModelProtocol?) {
+        self.delegate = delegate
+    }
     
     public func login(email: String, password: String) { // funcao de login no qual vai informar email e senha
         
@@ -20,10 +30,13 @@ class LoginViewModel {
         auth.signIn(withEmail: email, password: password)  { autoResult, error in
             if error == nil { // Caso nao deu nenhum erro
                 print("Sucesso login")
+                self.delegate?.sucessLogin()
             } else {
                 print("Error, login, error: \(error?.localizedDescription ?? "")")
+                self.delegate?.errorLogin(errorMessage: error?.localizedDescription ?? "")
             }
         }
+        
     }
     
     public func registerUser(email: String, password: String) {
@@ -36,4 +49,5 @@ class LoginViewModel {
             }
         }
     }
+    
 }
