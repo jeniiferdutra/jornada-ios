@@ -7,13 +7,13 @@
 
 import UIKit
 
-class LoginVC: UIViewController {
+class RegisterVC: UIViewController {
     
-    private var screen: LoginScreen?
-    private var viewModel: LoginViewModel = LoginViewModel()
+    private var screen: RegisterScreen?
+    private var viewModel: RegisterViewModel = RegisterViewModel()
     
     override func loadView() {
-        screen = LoginScreen()
+        screen = RegisterScreen()
         view = screen
     }
 
@@ -26,51 +26,46 @@ class LoginVC: UIViewController {
     
 }
 
-extension LoginVC: LoginScreenProtocol {
-    func tappedLoginButton() {
-        viewModel.login(email: screen?.emailTextField.text ?? "", password: screen?.passwordTextField.text ?? "")
+extension RegisterVC: RegisterScreenProtocol {
+    func tappedRegisterButton() {
+        viewModel.register(email: screen?.emailTextField.text ?? "", password: screen?.passwordTextField.text ?? "")
     }
     
 }
 
-extension LoginVC: LoginViewModelProtocol {
+extension RegisterVC: RegisterViewModelProtocol {
     
-    func sucessLogin() {
+    func sucessRegister() {
         let vc: HomeVC = HomeVC()
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true) // Modal
     }
     
-    func errorLogin(errorMessage: String) {
+    func errorRegister(errorMessage: String) {
         print(#function)
-        Alert(controller: self).showAlertInformation(title: "Ops! error Login!", message: errorMessage )
+        Alert(controller: self).showAlertInformation(title: "Ops! error cadastro!", message: errorMessage )
     }
     
 }
 
-extension LoginVC: UITextFieldDelegate {
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        print(#function)
-    }
+extension RegisterVC: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        print(#function)
+
         let email: String = screen?.emailTextField.text ?? ""
         let password: String = screen?.passwordTextField.text ?? ""
         
         if !email.isEmpty && !password.isEmpty {
-            screen?.loginButton.isEnabled = true
-            screen?.loginButton.backgroundColor = .darkGray
+            screen?.registerButton.isEnabled = true
+            screen?.registerButton.backgroundColor = .darkGray
         } else {
-            screen?.loginLabel.isEnabled = false
-            screen?.loginButton.backgroundColor = .darkGray.withAlphaComponent(0.6)
+            screen?.registerButton.isEnabled = false
+            screen?.registerButton.backgroundColor = .darkGray.withAlphaComponent(0.6)
         }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
-        print(#function)
         textField.resignFirstResponder()
         return false
     }
