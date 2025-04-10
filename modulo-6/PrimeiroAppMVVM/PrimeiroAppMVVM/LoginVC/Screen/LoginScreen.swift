@@ -62,7 +62,7 @@ class LoginScreen: UIView {
         btn.clipsToBounds = true
         btn.layer.cornerRadius = 7.5
         btn.isEnabled = false
-        btn.backgroundColor = .darkGray.withAlphaComponent(0.6)
+        btn.backgroundColor = .lightGray
         btn.addTarget(self, action: #selector(tappedLoginButton), for: .touchUpInside)
         return btn
     }()
@@ -75,9 +75,8 @@ class LoginScreen: UIView {
         let btn = UIButton()
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.setTitle("Não tem conta? Cadastre-se", for: .normal)
-        btn.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+        btn.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .bold)
         btn.setTitleColor(.white, for: .normal)
-        btn.isEnabled = false
         btn.backgroundColor = .clear
         btn.addTarget(self, action: #selector(tappedRegisterButton), for: .touchUpInside)
         return btn
@@ -126,7 +125,10 @@ class LoginScreen: UIView {
             loginButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 50),
             loginButton.leadingAnchor.constraint(equalTo: passwordTextField.leadingAnchor),
             loginButton.trailingAnchor.constraint(equalTo: passwordTextField.trailingAnchor),
-            loginButton.heightAnchor.constraint(equalTo: emailTextField.heightAnchor)
+            loginButton.heightAnchor.constraint(equalTo: emailTextField.heightAnchor),
+            
+            registerButton.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 20),
+            registerButton.centerXAnchor.constraint(equalTo: centerXAnchor)
         ])
     }
     

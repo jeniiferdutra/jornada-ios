@@ -57,10 +57,10 @@ extension RegisterVC: UITextFieldDelegate {
         
         if !email.isEmpty && !password.isEmpty {
             screen?.registerButton.isEnabled = true
-            screen?.registerButton.backgroundColor = .darkGray
+            screen?.registerButton.backgroundColor = .black
         } else {
             screen?.registerButton.isEnabled = false
-            screen?.registerButton.backgroundColor = .darkGray.withAlphaComponent(0.6)
+            screen?.registerButton.backgroundColor = .black.withAlphaComponent(0.6)
         }
     }
     

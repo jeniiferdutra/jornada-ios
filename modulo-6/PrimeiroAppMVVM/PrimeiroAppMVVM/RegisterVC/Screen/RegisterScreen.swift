@@ -61,7 +61,7 @@ class RegisterScreen: UIView {
         btn.clipsToBounds = true
         btn.layer.cornerRadius = 7.5
         btn.isEnabled = false
-        btn.backgroundColor = .darkGray.withAlphaComponent(0.6)
+        btn.backgroundColor = .black.withAlphaComponent(0.6)
         btn.addTarget(self, action: #selector(tappedRegisterButton), for: .touchUpInside)
         return btn
     }()
@@ -72,7 +72,7 @@ class RegisterScreen: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .systemBlue
+        backgroundColor = .yellow
         addElements()
         configConstraints()
     }
