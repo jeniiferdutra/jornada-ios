@@ -33,7 +33,6 @@ class LoginVC: UIViewController {
 extension LoginVC: LoginScreenProtocol {
     
     func tappedRegisterButton() {
-        print(#function)
         let vc = RegisterVC()
         navigationController?.pushViewController(vc, animated: true)
         
@@ -54,7 +53,6 @@ extension LoginVC: LoginViewModelProtocol {
     }
     
     func errorLogin(errorMessage: String) {
-        print(#function)
         Alert(controller: self).showAlertInformation(title: "Ops! error Login!", message: errorMessage )
     }
     

@@ -9,6 +9,7 @@ import UIKit
 
 protocol RegisterScreenProtocol: AnyObject {
     func tappedRegisterButton()
+    func tappedBackButton()
 }
 
 class RegisterScreen: UIView {
@@ -69,6 +70,21 @@ class RegisterScreen: UIView {
     @objc func tappedRegisterButton(_ sender: UIButton) {
         delegate?.tappedRegisterButton()
     }
+    
+    lazy var backButton: UIButton = {
+        let btn = UIButton()
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.setTitle("Voltar", for: .normal)
+        btn.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        btn.setTitleColor(.black, for: .normal)
+        btn.backgroundColor = .clear
+        btn.addTarget(self, action: #selector(tappedBackButton), for: .touchUpInside)
+        return btn
+    }()
+    
+    @objc func tappedBackButton(_ sender: UIButton) {
+        delegate?.tappedBackButton()
+    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -86,6 +102,7 @@ class RegisterScreen: UIView {
         addSubview(emailTextField)
         addSubview(passwordTextField)
         addSubview(registerButton)
+        addSubview(backButton)
     }
     
     private func configConstraints() {
@@ -107,7 +124,10 @@ class RegisterScreen: UIView {
             registerButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 50),
             registerButton.leadingAnchor.constraint(equalTo: passwordTextField.leadingAnchor),
             registerButton.trailingAnchor.constraint(equalTo: passwordTextField.trailingAnchor),
-            registerButton.heightAnchor.constraint(equalTo: emailTextField.heightAnchor)
+            registerButton.heightAnchor.constraint(equalTo: emailTextField.heightAnchor),
+            
+            backButton.topAnchor.constraint(equalTo: registerButton.bottomAnchor, constant: 20),
+            backButton.centerXAnchor.constraint(equalTo: centerXAnchor)
         ])
     }
     

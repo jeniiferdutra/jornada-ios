@@ -27,6 +27,10 @@ class RegisterVC: UIViewController {
 }
 
 extension RegisterVC: RegisterScreenProtocol {
+    func tappedBackButton() {
+        navigationController?.popViewController(animated: true)
+    }
+    
     func tappedRegisterButton() {
         viewModel.register(email: screen?.emailTextField.text ?? "", password: screen?.passwordTextField.text ?? "")
     }
@@ -42,7 +46,6 @@ extension RegisterVC: RegisterViewModelProtocol {
     }
     
     func errorRegister(errorMessage: String) {
-        print(#function)
         Alert(controller: self).showAlertInformation(title: "Ops! error cadastro!", message: errorMessage )
     }
     
