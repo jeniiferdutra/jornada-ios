@@ -11,6 +11,7 @@ class HomeViewModel {
     
     // MARK: Objeto que sempre deixaremos private para que a camada de View nao faça manipulaçoes com o respectivo objeto
     
+    private var service: HomeService = HomeService()
     private var posts = [Posts]()
     private var story = [Stories]()
     
@@ -37,6 +38,15 @@ class HomeViewModel {
             return CGSize(width: 120, height: frame.height) // altura total
         } else {
             return CGSize(width: frame.width - 120, height: frame.height)
+        }
+    }
+    
+    public func fetchAllRequest() {
+        service.getHomeJson { homeData, error in // chamando o serviço
+            if error == nil { // se nao existe erro
+                self.posts = homeData?.posts ?? []
+                self.story = homeData?.stories ?? []
+            }
         }
     }
 }

@@ -21,6 +21,7 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         //MARK: Assinando os protocolos da Collection
         homeScreen?.configProtocolsCollectionView(delegate: self, dataSource: self)
+        viewModel.fetchAllRequest()
     }
 }
 
