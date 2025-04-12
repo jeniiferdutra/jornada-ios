@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A3BD9DFC2A075A99ADBACA7D /* Pods_PrimeiroAppMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15B5CA545700D5C13BC668B6 /* Pods_PrimeiroAppMVVM.framework */; };
 		D03555E22DA606B500F40AA1 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D03555E12DA606B500F40AA1 /* FirebaseAuth */; };
 		D03555E42DA606B500F40AA1 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = D03555E32DA606B500F40AA1 /* FirebaseCrashlytics */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15B5CA545700D5C13BC668B6 /* Pods_PrimeiroAppMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrimeiroAppMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F621C5098F2D4CBF3E00584 /* Pods-PrimeiroAppMVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrimeiroAppMVVM.debug.xcconfig"; path = "Target Support Files/Pods-PrimeiroAppMVVM/Pods-PrimeiroAppMVVM.debug.xcconfig"; sourceTree = "<group>"; };
+		AA6457DA98091B05A5F66596 /* Pods-PrimeiroAppMVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrimeiroAppMVVM.release.xcconfig"; path = "Target Support Files/Pods-PrimeiroAppMVVM/Pods-PrimeiroAppMVVM.release.xcconfig"; sourceTree = "<group>"; };
 		D0DCFE282D94C0BB0069A39B /* PrimeiroAppMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrimeiroAppMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -43,17 +47,29 @@
 			files = (
 				D03555E22DA606B500F40AA1 /* FirebaseAuth in Frameworks */,
 				D03555E42DA606B500F40AA1 /* FirebaseCrashlytics in Frameworks */,
+				A3BD9DFC2A075A99ADBACA7D /* Pods_PrimeiroAppMVVM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A72AC64E6F80A5724BCC2A56 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2F621C5098F2D4CBF3E00584 /* Pods-PrimeiroAppMVVM.debug.xcconfig */,
+				AA6457DA98091B05A5F66596 /* Pods-PrimeiroAppMVVM.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D0DCFE1F2D94C0BA0069A39B = {
 			isa = PBXGroup;
 			children = (
 				D0DCFE2A2D94C0BB0069A39B /* PrimeiroAppMVVM */,
 				D0DCFE292D94C0BB0069A39B /* Products */,
+				A72AC64E6F80A5724BCC2A56 /* Pods */,
+				E4ED2D371AF3EC830983AD77 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,6 +81,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		E4ED2D371AF3EC830983AD77 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				15B5CA545700D5C13BC668B6 /* Pods_PrimeiroAppMVVM.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -72,10 +96,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0DCFE3B2D94C0C80069A39B /* Build configuration list for PBXNativeTarget "PrimeiroAppMVVM" */;
 			buildPhases = (
+				FC2D3A9F06EEE447AB93606B /* [CP] Check Pods Manifest.lock */,
 				D0DCFE242D94C0BB0069A39B /* Sources */,
 				D0DCFE252D94C0BB0069A39B /* Frameworks */,
 				D0DCFE262D94C0BB0069A39B /* Resources */,
 				D0686F6A2DA7653C006CA724 /* ShellScript */,
+				7CF4368644D96136FE28628C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -141,6 +167,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		7CF4368644D96136FE28628C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PrimeiroAppMVVM/Pods-PrimeiroAppMVVM-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PrimeiroAppMVVM/Pods-PrimeiroAppMVVM-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PrimeiroAppMVVM/Pods-PrimeiroAppMVVM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D0686F6A2DA7653C006CA724 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -164,6 +207,28 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
 		};
+		FC2D3A9F06EEE447AB93606B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PrimeiroAppMVVM-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -179,6 +244,7 @@
 /* Begin XCBuildConfiguration section */
 		D0DCFE3C2D94C0C80069A39B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F621C5098F2D4CBF3E00584 /* Pods-PrimeiroAppMVVM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -213,6 +279,7 @@
 		};
 		D0DCFE3D2D94C0C80069A39B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA6457DA98091B05A5F66596 /* Pods-PrimeiroAppMVVM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -281,7 +348,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -344,7 +411,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
