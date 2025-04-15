@@ -19,10 +19,27 @@ class HomeVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //MARK: Assinando os protocolos da Collection
-        homeScreen?.configProtocolsCollectionView(delegate: self, dataSource: self)
+        viewModel.delegate(delegate: self)
         viewModel.fetchAllRequest()
     }
+}
+
+extension HomeVC: HomeViewModelProtocol {
+    
+    func sucess() {
+        print(#function)
+        // Executa o código dentro do bloco na thread principal (importante para atualizar a interface gráfica)
+        DispatchQueue.main.async {
+            //MARK: Assinando os protocolos da Collection
+            self.homeScreen?.configProtocolsCollectionView(delegate: self, dataSource: self)
+        }
+    }
+    
+    // Método chamado quando ocorre um erro (ex: falha na requisição)
+    func error() {
+        print(#function)
+    }
+    
 }
 
 // MARK: Se eu estou assinando entao a nossa classe tem que entrar em conformidade para poder assinar os protocolos

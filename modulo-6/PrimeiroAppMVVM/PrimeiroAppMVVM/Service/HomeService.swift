@@ -16,7 +16,7 @@ class HomeService {
     // MARK: O parâmetro `completion` é utilizado para retornar os dados de forma assíncrona quando estiverem prontos.
     
     func getHomeAlamofire(completion: @escaping (HomeData?, Error?) -> Void) {
-        let url: String = "https://run.mocky.io/v3/47ba5b26-2912-4196-942d-e3f812688635"
+        let url: String = "https://run.mocky.io/v3/69ead729-7138-4c2f-9d6a-486a81cf940a"
         
         AF.request(url, method: .get).validate().responseDecodable(of: HomeData.self) { response in
             

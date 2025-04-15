@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol HomeViewModelProtocol: AnyObject {
+    func sucess()
+    func error()
+}
+
 class HomeViewModel {
     
     // MARK: Objeto que sempre deixaremos private para que a camada de View nao faça manipulaçoes com o respectivo objeto
@@ -14,6 +19,12 @@ class HomeViewModel {
     private var service: HomeService = HomeService()
     private var posts = [Posts]()
     private var story = [Stories]()
+    
+    private weak var delegate: HomeViewModelProtocol?
+    
+    public func delegate(delegate: HomeViewModelProtocol?) {
+        self.delegate = delegate
+    }
     
     // MARK: Acessar o objeto criando uma variavel computada do tipo get
     
@@ -46,6 +57,9 @@ class HomeViewModel {
             if error == nil { // se nao existe erro
                 self.posts = homeData?.posts ?? []
                 self.story = homeData?.stories ?? []
+                self.delegate?.sucess()
+            } else {
+                self.delegate?.error()
             }
         }
     }
