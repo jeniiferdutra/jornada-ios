@@ -53,7 +53,7 @@ class HomeViewModel {
     }
     
     public func fetchAllRequest() {
-        service.getHomeAlamofire { homeData, error in // chamando o serviço
+        service.getHomeURLSession { homeData, error in // chamando o serviço
             if error == nil { // se nao existe erro
                 self.posts = homeData?.posts ?? []
                 self.story = homeData?.stories ?? []
