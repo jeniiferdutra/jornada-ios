@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  SnapKitTestProject
+//  PrimeiroProjetoAcessibilidade
 //
-//  Created by Jenifer Rocha on 08/04/25.
+//  Created by Jenifer Rocha on 25/04/25.
 //
 
 import UIKit
