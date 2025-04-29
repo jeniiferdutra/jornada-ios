@@ -23,6 +23,7 @@ class ViewControllerScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Acessiblidade"
+        label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 30, weight: .semibold)
         return label
     }()
@@ -31,6 +32,7 @@ class ViewControllerScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "1"
+        label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 28, weight: .bold)
         return label
     }()
@@ -39,6 +41,7 @@ class ViewControllerScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "2"
+        label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 28, weight: .bold)
         return label
     }()
@@ -47,6 +50,7 @@ class ViewControllerScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "3"
+        label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 28, weight: .bold)
         return label
     }()
@@ -55,6 +59,7 @@ class ViewControllerScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "4"
+        label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 28, weight: .bold)
         return label
     }()
@@ -63,6 +68,7 @@ class ViewControllerScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "5"
+        label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 28, weight: .bold)
         return label
     }()
@@ -107,22 +113,22 @@ class ViewControllerScreen: UIView {
             titleLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
             titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             
-            positionOneLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20),
-            positionOneLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            
-            positionTwoLabel.topAnchor.constraint(equalTo: positionOneLabel.bottomAnchor, constant: 20),
-            positionTwoLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            
-            positionThreeLabel.topAnchor.constraint(equalTo: positionTwoLabel.bottomAnchor, constant: 20),
-            positionThreeLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            
-            positionFourLabel.topAnchor.constraint(equalTo: positionThreeLabel.bottomAnchor, constant: 20),
+            positionFourLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20),
             positionFourLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             
             positionFiveLabel.topAnchor.constraint(equalTo: positionFourLabel.bottomAnchor, constant: 20),
             positionFiveLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             
-            loginButton.topAnchor.constraint(equalTo: positionFiveLabel.bottomAnchor, constant: 20),
+            positionThreeLabel.topAnchor.constraint(equalTo: positionFiveLabel.bottomAnchor, constant: 20),
+            positionThreeLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            
+            positionOneLabel.topAnchor.constraint(equalTo: positionThreeLabel.bottomAnchor, constant: 20),
+            positionOneLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            
+            positionTwoLabel.topAnchor.constraint(equalTo: positionOneLabel.bottomAnchor, constant: 20),
+            positionTwoLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            
+            loginButton.topAnchor.constraint(equalTo: positionTwoLabel.bottomAnchor, constant: 20),
             loginButton.centerXAnchor.constraint(equalTo: centerXAnchor )
         ])
     }
