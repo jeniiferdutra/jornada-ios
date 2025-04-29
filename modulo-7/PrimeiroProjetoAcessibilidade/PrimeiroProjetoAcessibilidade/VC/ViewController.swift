@@ -33,6 +33,7 @@ class ViewController: UIViewController {
         screen?.positionFiveLabel.isAccessibilityElement = true
         screen?.loginButton.isAccessibilityElement = true
         screen?.titleLabel.isAccessibilityElement = true
+        screen?.personImageView.isAccessibilityElement = true
         
         // accessibilityLabel -> É o que o VoiceOver irá falar quando o cursor estiver no elemento
         
@@ -41,6 +42,7 @@ class ViewController: UIViewController {
         screen?.positionThreeLabel.accessibilityLabel = "Posiçao tres"
         screen?.positionFourLabel.accessibilityLabel = "Posiçao quatro"
         screen?.positionFiveLabel.accessibilityLabel = "Posiçao cinco"
+        screen?.personImageView.accessibilityLabel = "Imagem de uma pessoa "
         
         screen?.positionOneLabel.accessibilityTraits = .staticText
         screen?.positionTwoLabel.accessibilityTraits = .staticText
@@ -50,6 +52,7 @@ class ViewController: UIViewController {
         
         screen?.loginButton.accessibilityTraits = .button
         screen?.titleLabel.accessibilityTraits = .header
+        screen?.personImageView.accessibilityTraits = .image
         
         guard let primeiro = screen?.positionOneLabel,
               let segundo = screen?.positionTwoLabel,
@@ -57,11 +60,12 @@ class ViewController: UIViewController {
               let quarto = screen?.positionFourLabel,
               let quinto = screen?.positionFiveLabel,
               let button = screen?.loginButton,
-              let title = screen?.titleLabel else { return }
+              let title = screen?.titleLabel,
+              let image = screen?.personImageView else { return }
         
         // accessibilityElements -> ele ordena os elementos acessiveis
         
-        view.accessibilityElements = [primeiro, segundo, terceiro, quarto, quinto, button, title]
+        view.accessibilityElements = [image, primeiro, segundo, terceiro, quarto, quinto, button, title]
     }
 
 }
