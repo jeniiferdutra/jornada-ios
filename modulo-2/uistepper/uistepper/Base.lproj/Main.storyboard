@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="uistepper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="J6e-ec-UtL">
+                                <rect key="frame" x="149.66666666666666" y="410" width="94" height="32"/>
+                                <connections>
+                                    <action selector="tappedStepper:" destination="BYZ-38-t0r" eventType="valueChanged" id="67k-PJ-18Y"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Obh-Xn-glV">
+                                <rect key="frame" x="188.33333333333334" y="492" width="16.333333333333343" height="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Obh-Xn-glV" firstAttribute="top" secondItem="J6e-ec-UtL" secondAttribute="bottom" constant="50" id="2eh-pF-A16"/>
+                            <constraint firstItem="J6e-ec-UtL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VXO-je-apu"/>
+                            <constraint firstItem="Obh-Xn-glV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r9S-ed-bDZ"/>
+                            <constraint firstItem="J6e-ec-UtL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="v8O-xZ-gQc"/>
+                            <constraint firstItem="Obh-Xn-glV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ypW-LS-yJ6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="stepper" destination="J6e-ec-UtL" id="VRC-4H-qwm"/>
+                        <outlet property="valueLabel" destination="Obh-Xn-glV" id="aMt-vD-ghV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
