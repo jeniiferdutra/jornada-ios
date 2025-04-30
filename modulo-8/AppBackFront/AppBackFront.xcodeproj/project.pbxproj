@@ -6,11 +6,6 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		D0F6ED162DC18D3C00EFEE5E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D0F6ED152DC18D3C00EFEE5E /* FirebaseAuth */; };
-		D0F6ED182DC18D3C00EFEE5E /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = D0F6ED172DC18D3C00EFEE5E /* FirebaseCrashlytics */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
 		D0FF8CC82D921E6C00D70E59 /* AppBackFront.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppBackFront.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -41,8 +36,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0F6ED162DC18D3C00EFEE5E /* FirebaseAuth in Frameworks */,
-				D0F6ED182DC18D3C00EFEE5E /* FirebaseCrashlytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,8 +78,6 @@
 			);
 			name = AppBackFront;
 			packageProductDependencies = (
-				D0F6ED152DC18D3C00EFEE5E /* FirebaseAuth */,
-				D0F6ED172DC18D3C00EFEE5E /* FirebaseCrashlytics */,
 			);
 			productName = AppBackFront;
 			productReference = D0FF8CC82D921E6C00D70E59 /* AppBackFront.app */;
@@ -116,9 +107,6 @@
 			);
 			mainGroup = D0FF8CBF2D921E6C00D70E59;
 			minimizedProjectReferenceProxies = 1;
-			packageReferences = (
-				D0F6ED142DC18D3C00EFEE5E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D0FF8CC92D921E6C00D70E59 /* Products */;
 			projectDirPath = "";
@@ -157,8 +145,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 273F76QQVA;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AppBackFront/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -190,8 +176,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 273F76QQVA;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AppBackFront/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -357,30 +341,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		D0F6ED142DC18D3C00EFEE5E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 11.12.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		D0F6ED152DC18D3C00EFEE5E /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D0F6ED142DC18D3C00EFEE5E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-		D0F6ED172DC18D3C00EFEE5E /* FirebaseCrashlytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D0F6ED142DC18D3C00EFEE5E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseCrashlytics;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D0FF8CC02D921E6C00D70E59 /* Project object */;
 }
