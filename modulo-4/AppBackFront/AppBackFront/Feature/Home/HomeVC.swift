@@ -26,18 +26,32 @@ class HomeVC: UIViewController {
         viewModel.delegate(delegate: self)
         viewModel.fetchRequest(.request)
     }
-    
 
 }
 
 extension HomeVC: HomeViewDelegate {
-    func success() {
+    func success() { // função para configurar a collectionView (presumivelmente após um carregamento ou requisição)
         print(#function)
+        screen?.configCollectionViewProtocols(delegate: self, dataSource: self)
     }
     
     func error() {
         print(#function)
     }
     
+}
+
+extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        return UICollectionViewCell()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        <#code#>
+    }
 }
