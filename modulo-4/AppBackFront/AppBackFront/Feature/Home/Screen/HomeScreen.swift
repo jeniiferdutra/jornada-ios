@@ -93,7 +93,7 @@ class HomeScreen: UIView {
             viewBackground.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             viewBackground.leadingAnchor.constraint(equalTo: leadingAnchor),
             viewBackground.trailingAnchor.constraint(equalTo: trailingAnchor),
-            viewBackground.heightAnchor.constraint(equalToConstant: 200),
+            viewBackground.heightAnchor.constraint(equalToConstant: 165),
             
             logoImageView.topAnchor.constraint(equalTo: viewBackground.topAnchor, constant: 5),
             logoImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24),
