@@ -23,6 +23,7 @@ class HomeVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        screen?.configSearchBarDelegate(delegate: self)
         viewModel.delegate(delegate: self)
         viewModel.fetchRequest(.request)
     }
@@ -77,5 +78,20 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return viewModel.heightForRowAt
+    }
+}
+
+extension HomeVC: UISearchBarDelegate {
+    
+    // Método chamado sempre que o texto da searchBar é alterado
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) { // implementar buscas em tempo real enquanto o usuário digita
+        print(searchText)
+        viewModel.filterSearchText(searchText)
+        screen?.tableView.reloadData()
+    }
+    
+    // Método chamado quando o botão "Buscar" do teclado é pressionado
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()// Fecha o teclado
     }
 }
