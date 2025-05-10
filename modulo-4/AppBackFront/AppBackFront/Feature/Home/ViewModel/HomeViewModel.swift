@@ -81,14 +81,43 @@ class HomeViewModel {
     
     // MARK: - Filter
     
+    var typeFilter: Int? {
+        return searchNftData?.filterListNft?.first(where: {$0.isSelected == true})?.id
+    }
+    
     public func filterSearchText(_ text: String) { // Filtro para percorrer o array de lista, precisa criar uma outra lista para procurar
+      
+        var nftList: [Nft] = []
+        
+        if typeFilter == 0 { // o zero significa todos
+            nftList = nftData?.nftList ?? []
+        } else { // caso contrario, me retorne a lista de acordo com o tipo que eu selecionei
+            nftList = nftData?.nftList?.filter({$0.type == typeFilter ?? 0}) ?? []
+        }
+
+        
         if text.isEmpty {
-            searchNftData?.nftList = nftData?.nftList
+            searchNftData?.nftList = nftList
         } else {
-            searchNftData?.nftList = nftData?.nftList?.filter({ nft in
+            searchNftData?.nftList = nftList.filter({ nft in
                 return nft.userName?.lowercased().contains(text.lowercased()) ?? false
             })
         }
+    }
+    
+    public func setFilter(indexPath: IndexPath, searchText: String) {
+        var filterNFT: [FilterNft] = []
+        for (index, value) in (searchNftData?.filterListNft ?? []).enumerated() {
+            var type = value
+            if index == indexPath.row {
+                type.isSelected = true
+            } else {
+                type.isSelected = false
+            }
+            filterNFT.append(type)
+        }
+        searchNftData?.filterListNft = filterNFT
+        filterSearchText(searchText)
     }
     
 }
